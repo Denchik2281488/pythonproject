@@ -197,6 +197,7 @@ class Ui_mainWindow(QtWidgets.QMainWindow):
             self.canvas.draw()
             dialog = ClssDialog(self)
             dialog.resize(400,400)
+            print(model.summary())
             dialog.FileName.setText(str(model.summary()))
             dialog.exec()
         else: self.Update()
@@ -294,7 +295,7 @@ class Ui_mainWindow(QtWidgets.QMainWindow):
     def retranslateUi(self, mainWindow):
         _translate = QtCore.QCoreApplication.translate
         mainWindow.setWindowTitle(_translate("mainWindow", "Анализ данных"))
-        self.pushButton.setText(_translate("mainWindow", "Построить график"))
+        self.pushButton.setText(_translate("mainWindow", "Построить график cor"))
         self.pushButton1.setText(_translate("mainWindow", "Построить график\n регрессии"))
         self.comboBox.setItemText(0, _translate("mainWindow", "Линейная"))
         self.comboBox.setItemText(1, _translate("mainWindow", "Полиномиальная"))
